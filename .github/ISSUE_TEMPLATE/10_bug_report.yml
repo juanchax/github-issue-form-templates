@@ -1,0 +1,200 @@
+name: 🐛 Bug Report
+description: Create a report to help us improve
+labels: ['bug', 'needs triage']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Instructions
+        Please read NVDA's wiki article on [Creating new issues on the NVDA project](https://github.com/nvaccess/nvda/blob/master/projectDocs/issues/githubIssueTemplateExplanationAndExamples.md) thorouhgly, it includes detailed information on how to fill out this request, as well as how to provide the required files.  
+
+        > [!WARNING]
+        > Issues may be closed if the required information is not present.
+            
+  - type: markdown
+    attributes:
+      value: |
+        ## Citizen and Contributor Code of Conduct
+
+        The NVDA project has a [**Citizen and Contributor Code of Conduct**](https://github.com/nvaccess/nvda/blob/master/CODE_OF_CONDUCT.md). NV Access expects that all contributors and other community members read and abide by the rules set out in this document while participating or contributing to this project. This includes creating or commenting on issues and pull requests.
+  - type: checkboxes
+    id: code-of-conduct
+    attributes: 
+      label: Click below to accept
+      options: 
+        - label: I have read and agree to abide by the [Citizen and Contributor Code of Conduct](https://github.com/nvaccess/nvda/blob/master/CODE_OF_CONDUCT.md)
+          required: true
+  
+  - type: markdown
+    attributes:
+      value: |
+        # Issue Description
+
+  - type: markdown
+    attributes:
+      value: |
+        ### Steps to Reproduce
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Please include the step-by-step needed to reproduce the issue you are reporting. 
+      description: Remember, be clear and as concise as possible.
+      placeholder: 1. Open Chrome
+        2. Browse to www.google.com
+        3. Type "Hello"
+        4. Press Enter
+    validations:
+      required: true        
+
+  - type: markdown
+    attributes:
+      value: |
+        ### Actual Behavior
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Describe the issue as clearly and concisely as possible.
+      description: Use "Speak command keys" (NVDA+4) and speech viewer to copy and paste here.  Use braille viewer to copy and paste here.  You may also include an explanation.
+      placeholder: "An NVDA error sound is heard. NVDA Speech: \"button enable sound\""
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ### Expected Behavior
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Describe what you expected to happen.
+      description: Use "Speak command keys" (NVDA+4) and speech viewer to copy and paste here.  Use braille viewer to copy and paste here.  You may also include an explanation.     
+      placeholder: "There should be no error sound, and the page should change to show the search results. NVDA Speech: \"checkbox enable sound\""
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## NVDA logs, crash dumps and other attachments
+
+  - type: textarea
+    id: logs-and-files
+    attributes:
+      label: Please attach the NVDA log file to help in better understanding this issue; be sure to include any additional files required to reproduce this issue. 
+      description: Use "Speak command keys" (NVDA+4) and speech viewer to copy and paste here.  Use braille viewer to copy and paste here.  You may also include an explanation.     
+      placeholder:  You can attach images or log files by clicking this area to highlight it and then dragging and dropping files in.
+    validations:
+      required: true    
+
+  - type: markdown
+    attributes:
+      value: |
+        # Environment
+        
+        Please share the following details about the system where you can consistently reproduce the issue.
+        
+        If you are able to reproduce the Actual Behavior in more than one system, please include the details for the additional systems in the *Other information about your system* section below. 
+
+  - type: markdown
+    attributes:
+      value: |
+        ### NVDA Installation Type
+
+  - type: dropdown
+    id: nvda-installation-type
+    attributes:
+      label: Are you running NVDA installed on your system, portable or from source?
+      description: Please select the type of installation you're running.
+      options:
+        - Installed
+        - Portable
+        - From Source
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ### NVDA Version
+
+  - type: input
+    id: nvda-version
+    attributes:
+      label: What version of NVDA are you running?
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ### Windows Version
+
+  - type: input
+    id: win-version
+    attributes:
+      label: What version of Windows are you running?
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        # Additional Questions
+
+  - type: dropdown
+    id: issue-remains-after-restart
+    attributes:
+      label: Does the issue still occur after restarting your computer?
+      multiple: false
+      options:
+        - "No"
+        - "Yes"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue-remains-no-addons
+    attributes:
+      label: Does the issue still occur with NVDA add-ons disabled?
+      multiple: false
+      options:
+        - "No"
+        - "Yes"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue-remains-after-com-fix
+    attributes:
+      label: Does the issue still occur after running the COM Registration Fixing Tool in NVDA's tools menu?
+      multiple: false
+      options:
+        - "No"
+        - "Yes"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue-occur-other-versions
+    attributes:
+      label: Have you tried any other versions of NVDA?
+      multiple: false
+      options:
+        - "No"
+        - "Yes"
+    validations:
+      required: true
+
+  - type: textarea
+    id: other-versions-behavior
+    attributes:
+      label: If you have tried the same in other versions of NVDA, please report the behavior of each version you tried.
+      description: Feel free to include NVDA logs
+      placeholder: + NVDA version xxxx.xx.xx
+        + Installed/Portable/from Source
+        + Behavior observed
+    validations:
+      required: true        

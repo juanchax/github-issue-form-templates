@@ -1,0 +1,94 @@
+name: 💡 Feature Request
+description: Suggest an idea for this project
+labels: ['feature']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Instructions
+        Please read NVDA's wiki article on [Creating new issues on the NVDA project](https://github.com/nvaccess/nvda/blob/master/projectDocs/issues/githubIssueTemplateExplanationAndExamples.md) thorouhgly, it includes detailed information on how to fill out this feature request, as well as how to provide attachments.  
+
+        > [!WARNING]
+        > Issues may be closed if the required information is not present.
+            
+  - type: markdown
+    attributes:
+      value: |
+        ## Citizen and Contributor Code of Conduct
+
+        The NVDA project has a [**Citizen and Contributor Code of Conduct**](https://github.com/nvaccess/nvda/blob/master/CODE_OF_CONDUCT.md). NV Access expects that all contributors and other community members read and abide by the rules set out in this document while participating or contributing to this project. This includes creating or commenting on issues and pull requests.
+  - type: checkboxes
+    id: code-of-conduct
+    attributes: 
+      label: Citizen and Contributor Code of Conduct 
+      options: 
+        - label: I have read and agree to abide by the [Citizen and Contributor Code of Conduct](https://github.com/nvaccess/nvda/blob/master/CODE_OF_CONDUCT.md)
+          required: true
+  
+  - type: markdown
+    attributes:
+      value: |
+        # Feature Details
+
+  - type: dropdown
+    id: solution-or-feature
+    attributes:
+      label: Is the feature you are proposing related to an issue or problem?
+      multiple: false
+      options:
+        - "No"
+        - "Yes"
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ### Description of the Problem
+
+  - type: textarea
+    id: problem-description
+    attributes:
+      label: If the feature is related to a problem, please describe the problem in question in a clear and comprehensive way.
+      description: If you selected 'no' as the answer, leave blank.
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ### Description of the Feature
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: Please describe the feature proposed in a detailed, and organized way to help our team understand the use case. 
+      description: Provide a clear and concise description of how the feature would work/solve the related problem.
+    validations:
+      required: true
+
+
+  - type: markdown
+    attributes:
+      value: |
+        ### Feature Alternatives
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Please share any alternative solutions you may have considered. 
+      description: Feel free to leave blank if you haven't consider any alternatives.
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ### Additional Context
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Please share any additional information, context, screenshots, etc., that could help our team better understand the current pain points this feature request would solve. 
+    validations:
+      required: false
