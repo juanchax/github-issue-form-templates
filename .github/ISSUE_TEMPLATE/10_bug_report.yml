@@ -6,6 +6,10 @@ body:
     attributes:
       value: |
         # Instructions
+
+        > [!IMPORTANT]  
+        > Make sure you add a Title to this issue (field at the top). Short, Clear, descriptive summary of the issue.
+
         Please read NVDA's wiki article on [Creating new issues on the NVDA project](https://github.com/nvaccess/nvda/blob/master/projectDocs/issues/githubIssueTemplateExplanationAndExamples.md) thorouhgly, it includes detailed information on how to fill out this request, as well as how to provide the required files.  
 
         > [!WARNING]
